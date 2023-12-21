@@ -1,12 +1,13 @@
 import React from 'react'
 import { createContext, useState } from 'react';
 import {Route,Routes} from 'react-router-dom';
-import Navbar1 from './Navbar/Navbar1';
+import Navbar2 from './Navbar/Navbar2';
 import Home from '../Pages/Home';
 import Login from '../Pages/Login';
 import Registration from '../Pages/Registration';
 import { ToastContainer } from 'react-bootstrap';
 import { Product } from './Product/Product';
+import Search from '../Pages/Search';
 import Clothes from '../Pages/Clothes';
 import Boy from '../Pages/Boy';
 import Girl from '../Pages/Girl'
@@ -40,17 +41,18 @@ const MainRouter = () => {
 
   return (
     <div>
-      <Navbar1/>
+      
          <Data.Provider value={{product,setProduct,userData, setUserData,login,setLogin,loginuser,setLoginUser,cart,setcart,vieworder,setvieworder,search,setSearch}}> 
 
          <Toaster position='top-center'/> 
-          
+         <Navbar2/>
        <Routes>
         
         <Route path='/'  element= {<Home />} /> 
         <Route path='/shop' element={<Shop/>} />
         <Route path='/login'  element= {<Login/>} />
         <Route path='/register'  element= { <Registration />} />
+        <Route path='/search' element={<Search/>} />
         <Route path='/clothes' element={<Clothes/>}/>
         <Route path='/boy' element={<Boy/>} />
         <Route path='/girl' element={<Girl />} />

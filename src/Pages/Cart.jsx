@@ -3,6 +3,7 @@ import { Data } from '../components/MainRouter'
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { MDBCardBody, MDBCardImage, MDBCol, MDBContainer, MDBIcon, MDBRow, MDBTypography } from 'mdb-react-ui-kit';
+import { Button } from 'react-bootstrap';
 
 const Cart = () => {
     const {setcart,product,setvieworder,loginuser} = useContext(Data);
@@ -70,7 +71,7 @@ const Cart = () => {
                         <div>
                             <p className='mb-0'>
                                 <span className='text-warning'></span>
-                                <a href='#!' className='text-danger'>{reducer}<i className='fas fa-angle-down mt-1'></i></a>
+                                <a href='#!' >{reducer}<i className='fas fa-angle-down mt-1'></i></a>
                             </p>
                         </div>
                     </div>
@@ -86,6 +87,7 @@ const Cart = () => {
                                     <p>
                                         <span className='text-muted'>{item.Description}</span>
                                     </p>
+                                    <p className='text-dark bold'>{item.Price}</p>
 
                                 </MDBCol>
                                 <MDBCol md='12' lg='6' xl='4' className='d-flex align-items-center justify-content-around'>
@@ -110,9 +112,9 @@ const Cart = () => {
         </MDBContainer>
      </section>
      <div>
-        <h1>TOTAL {reducer}</h1>
-        <button className='bg-warning m-2' onClick={(()=>clear())}>ClearCart</button>
-        <button className='bg-success' onClick={order}>Buy All</button>
+        <h1>Total {reducer}</h1>
+        <Button className='bg-info m-2 p-2' onClick={(()=>clear())}>ClearCart</Button>
+        <Button className='bg-success m-2 p-2' onClick={order}>Buy All</Button>
      </div>
 
     </div>

@@ -35,7 +35,9 @@ const Login = ()=>{
 
   return(
     <Container className="d-flex justify-content-center align-items-center login" style={{ minHeight: '100vh' }}>
-      <div className="shadow p-3 mb-5 bg-white rounded m-3" style={{ width: '25rem' }}>
+      
+      <div className="shadow p-3 mb-5 bg-white rounded m-3" style={{ width: '25rem',border:'2px solid black' }}>
+      <h1 style={{textAlign:'center'}}>Login</h1>
         <Row className="mb-3">
           <Col>
             <input className="form-control" placeholder="Username" ref={user} />
@@ -56,7 +58,7 @@ const Login = ()=>{
 
         <Row className="mb-3">
           <Col>
-            <Button variant="success" onClick={logins} block>
+            <Button variant="primary" onClick={logins} block>
               Login
             </Button>
           </Col>

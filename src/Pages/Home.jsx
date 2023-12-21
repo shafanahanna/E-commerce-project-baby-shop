@@ -1,5 +1,6 @@
 import React from 'react'
 import {  Carousel } from 'react-bootstrap'
+import Testimonials from './Testimonals'
 
 
  
@@ -39,7 +40,7 @@ function Home() {
             </Carousel.Item>
             
         </Carousel>
-        
+        <Testimonials/>
         
     </div>
   )
