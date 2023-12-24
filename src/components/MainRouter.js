@@ -19,6 +19,7 @@ import Footer from '../components/Footer/Footer';
 import Shop from '../Pages/Shop';
 import Cart from '../Pages/Cart';
 import Payment from '../Pages/Payment';
+import Testimonials from '../Pages/Testimonals';
 
 
 
@@ -49,6 +50,7 @@ const MainRouter = () => {
        <Routes>
         
         <Route path='/'  element= {<Home />} /> 
+        <Route path='/testimonals' element={<Testimonials />} />
         <Route path='/shop' element={<Shop/>} />
         <Route path='/login'  element= {<Login/>} />
         <Route path='/register'  element= { <Registration />} />

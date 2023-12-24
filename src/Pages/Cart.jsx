@@ -62,8 +62,8 @@ const Cart = () => {
     
   return (
     <div>
-     <section className='navu h-100' style={{backgroundColor:'#eee'}}>
-        <MDBContainer className='py-5 h-100'>
+     <section className='navu h-100 w-50' style={{backgroundColor:'#eee'}}>
+        <MDBContainer className='py-5 h-100 justify-content-center align-items-center '>
             <MDBRow className='justify-content-center align-items-center h-100'>
                 <MDBCol md='10'>
                     <div className='d-flex justify-content-between align-items-center mb-4'>

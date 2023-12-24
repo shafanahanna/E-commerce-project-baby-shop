@@ -45,6 +45,7 @@ const Testimonials = () => {
                   <div className="d-flex justify-content-center mb-4">
                     <img
                       src="https://images.unsplash.com/profile-fb-1509026921-e281c2b5f3da.jpg?bg=fff&crop=faces&dpr=1&h=150&w=150&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+                      alt="pic2"
                       className="rounded-circle shadow-1-strong"
                       width="100"
                       height="100"
@@ -69,7 +70,8 @@ const Testimonials = () => {
                 <div className="card-body py-4 mt-2">
                   <div className="d-flex justify-content-center mb-4">
                     <img
-                      src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NnwxNzI5MjU4fHxlbnwwfHx8fHw%3D"
+                      src="https://babymoo.in/cdn/shop/files/PHOTO-2022-01-22-19-12-16_360x_47435b4c-e6fd-4857-934a-03208dc473cf.webp?v=1652098392&width=100"
+                      alt="pic"
                       className="rounded-circle shadow-1-strong"
                       width="100"
                       height="100"
@@ -96,6 +98,7 @@ const Testimonials = () => {
                   <div className="d-flex justify-content-center mb-4">
                     <img
                       src="https://www.thebabycotshop.com/cdn/shop/files/istockphoto-1154642632-612x612_large.jpg?v=1658166022"
+                      alt="pic1"
                       className="rounded-circle shadow-1-strong"
                       width="100"
                       height="100"

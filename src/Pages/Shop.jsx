@@ -13,7 +13,7 @@ const Shop = () => {
             <div className='row'>
                 {product.map((item)=>(
                     <CardGroup className='col-7 col-md-3' key={item.Id}>
-                        <Card className='m-2  p-5' style={{ border:'solid black 2px'}}>
+                        <Card className='m-2  p-4' style={{ border:'solid black 2px'}}>
                             <Card.Img style={{maxHeight:'17rem'}} src={item.Image}/>
                             <Card.Body>
                                 <Card.Text>{item.ProductName}</Card.Text>

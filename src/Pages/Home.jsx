@@ -20,14 +20,14 @@ function Home() {
                 
             </Carousel.Item>
 
-            <Carousel.Item>
+            {/* <Carousel.Item>
                 <img 
                     className='d-block w-100'
                     style={{maxHeight:"100vh"}}
                     src={require('../components/Assets/home-img1.jpg')}
                     alt='Second slide' />
                     
-            </Carousel.Item>
+            </Carousel.Item> */}
 
 
             <Carousel.Item>
@@ -38,6 +38,15 @@ function Home() {
                     alt='three slide' />
                     
             </Carousel.Item>
+
+             <Carousel.Item>
+                <img 
+                    className='d-block w-100'
+                    style={{maxHeight:"100vh"}}
+                    src="https://babymoo.in/cdn/shop/files/Christmas_Web.jpg?v=1703327789&width=2000"
+                    alt='fourt slide' />
+                    
+            </Carousel.Item> 
             
         </Carousel>
         <Testimonials/>

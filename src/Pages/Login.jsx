@@ -13,9 +13,6 @@ const Login = ()=>{
   const pass = useRef();
 
   
-    
-  
-  
 
   const logins = (e)=>{
     e.preventDefault();

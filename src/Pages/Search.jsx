@@ -19,9 +19,7 @@ const Search = () => {
     <div>
       <div>
         <hr />
-        <div className='d-flex' style={{justifyContent:'space-between'}}>
-            <h5 className='mx-5' style={{textAlign:'center',fontSize:'2.5em',fontWeight:'bold'}}>All Products</h5>
-        </div>
+        
         <div className='d-flex flex-wrap m-3 justify-content-center'>
             {Search.map((item)=>(
                 <Card onClick={()=>{navigate(`/viewproduct/${item.Id}`)}} 

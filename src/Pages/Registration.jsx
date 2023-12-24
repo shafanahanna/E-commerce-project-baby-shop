@@ -44,7 +44,7 @@ if(password.length<6){
   return;
 }
 if(password !== confirmpassword){
-  setErrorMessage("do not match the password");
+  setErrorMessage(" Password do not match ");
   return;
 }
 setErrorMessage('');
@@ -55,7 +55,7 @@ navigate('/Login');
 return(
   <>
    <div className="container d-flex justify-content-center align-items-center register " style={{ minHeight: '100vh'}}>
-      <div className='rounded shadow p-3 mb-5 bg-white register1 ' style={{ width: '25rem' }}>
+      <div className='rounded shadow p-3 mb-5 bg-white register1 ' style={{ width: '25rem',border:'2px solid black' }}>
         <form >
           <h1 className='mt-3' style={{ fontFamily: 'inherit',color:'brown' }}>
             Registration Form

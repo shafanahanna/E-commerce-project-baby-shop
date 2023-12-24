@@ -1,17 +1,26 @@
 import React, { useContext } from 'react';
 import { Navbar, Nav, Container,NavDropdown} from 'react-bootstrap';
-import { BsCartFill } from 'react-icons/bs';
-import { MdAdminPanelSettings } from 'react-icons/md';
+import { FaSearch } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 import { Data } from '../MainRouter';
+import { Form ,} from 'react-bootstrap';
 import './Navbar.css';
+import { RiLogoutCircleLine } from "react-icons/ri";
+import { BiSolidBabyCarriage } from "react-icons/bi";
+import { RiAdminLine } from "react-icons/ri";
+
+
+
+
+
+
 
 
 
 const Navbar2 = () => {
   const navigate = useNavigate();
-  const { login, setLogin, userData} = useContext(Data);
+  const { login, setLogin, userData,setSearch} = useContext(Data);
 
   const logout = () => {
     setLogin(false);
@@ -33,12 +42,12 @@ const Navbar2 = () => {
 
   return (
     <div>
-      <Navbar expand="lg" className="body-tertiary">
+      <Navbar expand="lg" className="body-tertiory ">
         <Container fluid>
           <Navbar.Brand href="/" className="company-logo">
           <img src="https://static.vecteezy.com/system/resources/thumbnails/015/393/872/small/cute-baby-for-baby-shop-icon-logo-design-with-love-symbol-concept-illustration-vector.jpg" alt='Logo' className='logo'></img>
               <span style={{ fontSize: '2rem', fontWeight: 'bold', color: 'deeppink',  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>Baby</span>
-              <span style={{ fontSize: '2rem', fontWeight: 'bold', color: 'darkblue', fontFamily: 'cursive', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>Que</span>
+              <span style={{ fontSize: '2rem', fontWeight: 'bold', color: 'skyblue', fontFamily: 'cursive', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>Que</span>
         
           </Navbar.Brand>
 
@@ -49,14 +58,14 @@ const Navbar2 = () => {
     
 
         
-            <Nav className="me-auto my-2 my-lg-0 fw-bold" style={{ maxHeight: '100px' }} navbarScroll variant="black">
+            <Nav className="me-auto my-2 my-lg-0 fw-bold mb-8" style={{ maxHeight: '100px' }} navbarScroll variant="black">
             
-            <Nav.Link href="/">HOME</Nav.Link>
-             <Nav.Link href="/shop">SHOP</Nav.Link>
+            <Nav.Link onClick={()=>navigate('/')}>HOME</Nav.Link>
+             <Nav.Link onClick={()=>navigate('/shop')}>SHOP</Nav.Link>
              <NavDropdown title="CLOTHES" id="responsive-nav">
-              <NavDropdown.Item href="/clothes">All</NavDropdown.Item>
-              <NavDropdown.Item href="/boy">Boy</NavDropdown.Item>
-              <NavDropdown.Item href="/girl">Girl</NavDropdown.Item>
+              <NavDropdown.Item onClick={()=>navigate('/clothes')}>All</NavDropdown.Item>
+              <NavDropdown.Item onClick={()=>navigate('/boy')}>Boy</NavDropdown.Item>
+              <NavDropdown.Item onClick={()=>navigate('/girl')}>Girl</NavDropdown.Item>
               </NavDropdown>
 
               <Nav.Link
@@ -75,6 +84,19 @@ const Navbar2 = () => {
               
             </Nav>
 
+            <Form className="d-flex">
+             <Form.Control
+              type="search"
+               placeholder="Search here...."
+               className="me-2 "
+               aria-label="Search"
+               onChange={(evt)=>setSearch(evt.target.value)} >
+            </Form.Control>
+
+           <FaSearch onClick={()=>navigate('/search')}  className='search'/>
+              </Form>
+
+
             <Nav className="d-flex my-3 nav-left  fw-bold" navbarScroll>
               {login === false ? (
                 <Nav.Link className="text" onClick={() => navigate('/login')}>
@@ -82,15 +104,18 @@ const Navbar2 = () => {
                 </Nav.Link>
               ) : (
                 <>
-                  <Nav.Link className="text-danger">{userData.userName}</Nav.Link>
-                  <Nav.Link className="text-danger" onClick={logout}>
-                    LogOut
-                  </Nav.Link>
+                  <Nav.Link className="text-success">{userData.userName}</Nav.Link>
+                  {/* <Nav.Link className="text-danger" onClick={logout}>
+                  <RiLogoutCircleLine />
+                  </Nav.Link> */}
                   
                   </>
               )}
-          <BsCartFill style={{ width: '2rem', height: '2rem', marginLeft: '1rem', cursor: 'pointer' }} onClick={carticon} />
-             <MdAdminPanelSettings style={{ width: '2rem', height: '2rem', marginLeft: '1rem', cursor: 'pointer' }} onClick={() => navigate('/adminlogin')} />
+            
+            <BiSolidBabyCarriage style={{ width: '2rem', height: '2rem', marginLeft: '1rem', cursor: 'pointer' }} onClick={carticon}/>
+            
+             <RiAdminLine style={{ width: '2rem', height: '2rem', marginLeft: '1rem', cursor: 'pointer' }} onClick={() => navigate('/adminlogin')}  />
+
              </Nav>
           </Navbar.Collapse>
         </Container>
