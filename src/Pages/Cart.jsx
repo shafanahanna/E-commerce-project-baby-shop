@@ -17,7 +17,7 @@ const Cart = () => {
         const newTask = cartuser.filter((item)=> item.Id !== x);
         setcartuser(newTask);
         loginuser.cart = newTask
-        toast.console.error('Your product is removed');
+        toast.error('Your product is removed');
     }
 
     const handleincre = (x) =>{

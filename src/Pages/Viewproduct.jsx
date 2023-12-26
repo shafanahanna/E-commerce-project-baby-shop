@@ -31,11 +31,11 @@ const Viewproduct = () => {
         }
     };
    return (
-    <div className='container mt-5 m-3'>
+    <div className='container mt-4 m-4 '>
       <div className='row justify-content-center align-items-center' >
-        <div className='col-md-6'>
+        <div className='col-md-5'>
           {findviewproduct.map((item) => (
-            <Card className='w-100' key={item.Id}>
+            <Card className='w-100' key={item.Id} style={{border:'2px solid black' , padding:'20px'}}>
               <Card.Img
                 className='mx-auto' 
                 style={{ width: "12rem", height: "10rem" }}

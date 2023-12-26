@@ -7,7 +7,7 @@ import Testimonials from './Testimonals'
 
 function Home() {
   return (
-    <div>
+    <div style={{border:'1px solid black'}}>
         
         <Carousel data-bs-theme='white'>
             <Carousel.Item>

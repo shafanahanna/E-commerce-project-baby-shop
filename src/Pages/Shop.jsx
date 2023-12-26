@@ -18,7 +18,7 @@ const Shop = () => {
                             <Card.Body>
                                 <Card.Text>{item.ProductName}</Card.Text>
                                 <Card.Text> Rs{item.Price}</Card.Text>
-                                <Button variant='warning' style={{margin:'2px'}} onClick={()=>navigate(`/Viewproduct/${item.Id}`)}>View Product</Button>
+                                <Button variant='warning' style={{margin:'2px ',marginBottom:'20px'}} onClick={()=>navigate(`/Viewproduct/${item.Id}`)}>View Product</Button>
                             </Card.Body>
                         </Card>
                     </CardGroup>

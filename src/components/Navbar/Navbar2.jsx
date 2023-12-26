@@ -9,11 +9,8 @@ import './Navbar.css';
 import { RiLogoutCircleLine } from "react-icons/ri";
 import { BiSolidBabyCarriage } from "react-icons/bi";
 import { RiAdminLine } from "react-icons/ri";
-
-
-
-
-
+import { CgProfile } from "react-icons/cg";
+import { AiOutlineLogin } from "react-icons/ai";
 
 
 
@@ -25,7 +22,6 @@ const Navbar2 = () => {
   const logout = () => {
     setLogin(false);
     navigate('/');
-    
     toast.error('You have logged out');
   };
 
@@ -42,12 +38,12 @@ const Navbar2 = () => {
 
   return (
     <div>
-      <Navbar expand="lg" className="body-tertiory ">
+      <Navbar expand="lg" className="body-primary ">
         <Container fluid>
           <Navbar.Brand href="/" className="company-logo">
           <img src="https://static.vecteezy.com/system/resources/thumbnails/015/393/872/small/cute-baby-for-baby-shop-icon-logo-design-with-love-symbol-concept-illustration-vector.jpg" alt='Logo' className='logo'></img>
               <span style={{ fontSize: '2rem', fontWeight: 'bold', color: 'deeppink',  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>Baby</span>
-              <span style={{ fontSize: '2rem', fontWeight: 'bold', color: 'skyblue', fontFamily: 'cursive', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>Que</span>
+              <span style={{ fontSize: '2rem', fontWeight: 'bold', color: 'skyblue', fontFamily: 'cursive' }}>Que</span>
         
           </Navbar.Brand>
 
@@ -99,18 +95,24 @@ const Navbar2 = () => {
 
             <Nav className="d-flex my-3 nav-left  fw-bold" navbarScroll>
               {login === false ? (
-                <Nav.Link className="text" onClick={() => navigate('/login')}>
-                  Login
+                <Nav.Link className="text-black" onClick={() => navigate('/login')}>
+                  <AiOutlineLogin />
                 </Nav.Link>
               ) : (
                 <>
-                  <Nav.Link className="text-success">{userData.userName}</Nav.Link>
-                  {/* <Nav.Link className="text-danger" onClick={logout}>
+                  <Nav.Link className="text-danger">{userData.password}
+                    <CgProfile />
+                 </Nav.Link>
+                   {/* <Nav.Link className="text-danger" onClick={logout}>
                   <RiLogoutCircleLine />
-                  </Nav.Link> */}
+                  </Nav.Link>  */}
                   
                   </>
+                  
               )}
+              <Nav.Link className="text-danger" onClick={logout}>
+                  <RiLogoutCircleLine />
+                  </Nav.Link> 
             
             <BiSolidBabyCarriage style={{ width: '2rem', height: '2rem', marginLeft: '1rem', cursor: 'pointer' }} onClick={carticon}/>
             

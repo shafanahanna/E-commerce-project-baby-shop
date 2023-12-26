@@ -20,6 +20,15 @@ import Shop from '../Pages/Shop';
 import Cart from '../Pages/Cart';
 import Payment from '../Pages/Payment';
 import Testimonials from '../Pages/Testimonals';
+import AdminLogin from './AdminLogin';
+import AdminHome from './AdminHome';
+import Users from '../Admin/Users';
+import AdminProduct from '../Admin/AdminProduct';
+import Vieworder from '../Admin/ViewOrder';
+import SideBar from './Sidebar';
+import AddProdct from '../Admin/AddProdct';
+import EditProdct from '../Admin/EditProdct';
+import AdminMain from '../Admin/AdminMain';
 
 
 
@@ -63,6 +72,15 @@ const MainRouter = () => {
         <Route path='/viewproduct/:Id' element={<Viewproduct/>} />
         <Route path='/cart' element={<Cart/>} />
         <Route path='/payment' element={<Payment/>} />
+        <Route path='/adminlogin' element={<AdminLogin/>}/>
+        <Route path='/adminhome' element={<AdminHome/>}/>
+        <Route path='/users' element={<Users/>}/>
+        <Route path='/adminproduct' element={<AdminProduct/>}/>
+        <Route path='/vieworder' element={<Vieworder/>}/>
+        <Route path='/sidebar' element={<SideBar/>}/>
+        <Route path='/addproduct' element={<AddProdct/>}/>
+        <Route path='/adminmain' element={<AdminMain/>}/>
+        <Route path='/edit/:Id' element={<EditProdct/>}/>
         </Routes>
   
          </Data.Provider> 

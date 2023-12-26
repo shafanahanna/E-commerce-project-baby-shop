@@ -6,7 +6,7 @@ import { Card,Button,Row,Col} from 'react-bootstrap';
 const Girl = () => {
     const navigate= useNavigate()
     const { product } = useContext(Data)
-    const girl = product.filter((item)=> item.sex === 'Girl')
+    const girl = product.filter((item)=> item.Gender === 'Girl')
   return (
     <Row className='m-4'>
       <h1 style={{color:'deeppink',textAlign:'center'}}>Girls</h1>

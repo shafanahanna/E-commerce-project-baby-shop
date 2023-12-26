@@ -3,15 +3,16 @@ import { Container } from "react-bootstrap";
 import { FaArrowAltCircleRight,  } from "react-icons/fa";
 import { FaStar } from "react-icons/fa6";
 import { FaStarHalfAlt } from "react-icons/fa";
+import '../Styles/Testimonals.css'
 
  
 
 const Testimonials = () => {
   return (
-    <Container className=" mt-5 mb-4">
+    <Container className=" mt-5 mb-4 testimonal">
     
       <section style={{color: "#000", backgroundColor: "#f3f2f2"}}>
-        <div className="container py-5">
+        <div className="container py-5 ">
           <div className="row d-flex justify-content-center">
             <div className="col-md-10 col-xl-8 text-center">
             {/* <svg
