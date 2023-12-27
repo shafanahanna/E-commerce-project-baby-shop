@@ -47,21 +47,7 @@ const navigate=useNavigate();
           </Card.Body>
         </Card>
         </div>
-        <div >
-        <Card 
-          style={{ width: '18rem' }}
-          className="mb-2  m-2 bg-danger"
-        >
-          <Card.Header> Sales</Card.Header>
-          <Card.Body>
-            <Card.Title>Sales </Card.Title>
-            <Card.Text>
-        <h1>  {userData.length} </h1>
-           
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        </div>
+        
         <div >
         <Card 
           style={{ width: '18rem' }}
@@ -71,7 +57,7 @@ const navigate=useNavigate();
           <Card.Body>
             <Card.Title> Delivery </Card.Title>
             <Card.Text>
-      <h1>  {userData.length+5} </h1>  
+      <h1>  {vieworder.length} </h1>  
              
             </Card.Text>
           </Card.Body>

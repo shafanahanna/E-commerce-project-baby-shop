@@ -57,7 +57,7 @@ return(
    <div className="container d-flex justify-content-center align-items-center register " style={{ minHeight: '100vh'}}>
       <div className='rounded shadow p-3 mb-5 bg-white register1 ' style={{ width: '25rem',border:'2px solid black' }}>
         <form >
-          <h1 className='mt-3' style={{ fontFamily: 'inherit',color:'brown' }}>
+          <h1 className='mt-3' style={{ fontFamily: 'inherit',color:'black' }}>
             Registration Form
           </h1>
           <input ref={userNameRef} className='form-control mt-3' type='text' placeholder='Username' required />
@@ -70,10 +70,10 @@ return(
           <br />
           <input ref={confirmpasswordRef} className='form-control mt-4' type='password' placeholder='confirmpassword' required />
           {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-          <button className='btn btn-warning rounded mt-4 w-100' onClick={submit}>
+          <button className='btn btn-primary rounded mt-4 w-100' onClick={submit}>
             Sign up
           </button>
-          <p className='mt-4 p-2' style={{color:'brown',fontWeight:'bold'}}>
+          <p className='mt-4 p-2' style={{color:'black',fontWeight:'bold'}}>
             Already have an account? <Link to='/login' style={{ textDecoration: 'none' }}>Login</Link>
           </p>
         </form>

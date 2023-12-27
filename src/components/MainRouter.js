@@ -28,7 +28,6 @@ import Vieworder from '../Admin/ViewOrder';
 import SideBar from './Sidebar';
 import AddProdct from '../Admin/AddProdct';
 import EditProdct from '../Admin/EditProdct';
-import AdminMain from '../Admin/AdminMain';
 
 
 
@@ -79,7 +78,6 @@ const MainRouter = () => {
         <Route path='/vieworder' element={<Vieworder/>}/>
         <Route path='/sidebar' element={<SideBar/>}/>
         <Route path='/addproduct' element={<AddProdct/>}/>
-        <Route path='/adminmain' element={<AdminMain/>}/>
         <Route path='/edit/:Id' element={<EditProdct/>}/>
         </Routes>
   

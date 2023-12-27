@@ -1,37 +1,38 @@
-import React, { useContext, useRef, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { toast } from 'react-hot-toast';
-import { Data } from '../components/MainRouter';
+import React, { useContext, useRef, useState } from "react";
+import { useParams } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { toast } from "react-hot-toast";
+import { Data } from "../components/MainRouter";
 
 const EditProdct = () => {
   const { Id } = useParams();
   const ProductNameRef = useRef(null);
   const StockRef = useRef(null);
   const PriceRef = useRef(null);
-  const CategoryRef = useRef(null)
 
-  const { product, setProduct} = useContext(Data);
+  const { product, setProduct } = useContext(Data);
   const findval = product.find((item) => item.Id === parseInt(Id));
 
   const [formData, setFormData] = useState({
     ProductName: findval.ProductName,
     Stock: findval.Stock,
     Price: findval.Price,
-    Category : findval.Category
+    
   });
 
-    // Retrieve updated values
+  // Retrieve updated values
   const handleSave = () => {
-   
     const updatedProductName = ProductNameRef.current.value;
     const updatedStock = StockRef.current.value;
     const updatedPrice = PriceRef.current.value;
-    const updatedCategory = CategoryRef.current.value;
+    
 
-   
-    if (!updatedProductName.trim() || !updatedStock.trim() || !updatedPrice.trim() || updatedCategory.trim()) {
+    if (
+      !updatedProductName.trim() ||
+      !updatedStock.trim() ||
+      !updatedPrice.trim() 
       
+    ){
       toast.error("Please fill in all fields");
       return;
     }
@@ -41,10 +42,9 @@ const EditProdct = () => {
       ProductName: updatedProductName,
       Stock: updatedStock,
       Price: updatedPrice,
-      Category:updatedCategory
+      
     });
 
-   
     const updatedProduct = product.map((item) =>
       item.Id === parseInt(Id)
         ? {
@@ -52,18 +52,18 @@ const EditProdct = () => {
             ProductName: updatedProductName,
             Stock: updatedStock,
             Price: updatedPrice,
-            Category:updatedCategory,
+          
           }
         : item
     );
 
     setProduct(updatedProduct);
- 
+
     toast.success("Product updated");
   };
 
   return (
-    <div style={{ width: '100%', height: '40vh' }}>
+    <div style={{ width: "100%", height: "40vh" }}>
       <table className="table table-striped">
         <thead>
           <tr>
@@ -76,20 +76,17 @@ const EditProdct = () => {
             <th scope="col">
               <b>Stock</b>
             </th>
-            <th scope="col">
-              <b>Category</b>
-            </th>
+            
           </tr>
         </thead>
         <tbody>
           <tr key={findval.Id}>
             <td>
-              {' '}
               <input
                 type="text"
                 ref={ProductNameRef}
                 defaultValue={formData.ProductName}
-              />{' '}
+              />
             </td>
             <td>
               <input
@@ -105,13 +102,7 @@ const EditProdct = () => {
                 defaultValue={formData.Stock}
               />
             </td>
-            <td>
-              <input
-                type="text"
-                ref={CategoryRef}
-                defaultValue={formData.Category}
-              />
-            </td>
+            
           </tr>
         </tbody>
       </table>

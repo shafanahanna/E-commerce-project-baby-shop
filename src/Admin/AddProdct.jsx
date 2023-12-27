@@ -9,18 +9,18 @@ import SideBar from '../components/Sidebar'
 const AddProdct = () => {
   let Id= 40;
   const navigate=useNavigate();
-  const {product,setproduct} =useContext(Data)
+  const {product,setProduct} =useContext(Data)
   const qtyRef =useRef(null)
   const ProductNameRef = useRef(null)
   const PriceRef =useRef(null)
   const ImageRef = useRef(null)
   const CategoryRef = useRef(null)
 
-  const handleSubmit = (evt) =>{
-    evt.preventDefualt();
+  const handleSubmit = () =>{
+      
 
     const Price = parseInt(PriceRef.current.value);
-    const qty = parseInt(qtyRef.current.value,10);
+    const qty = parseInt(qtyRef.current.value);
     
     if(isNaN(Price) || isNaN(qty)){
       toast.error('Invalid price or quantity')
@@ -29,13 +29,13 @@ const AddProdct = () => {
     const newProduct = {
       Id :Id + 1,
       ProductName: ProductNameRef.current.value,
-      Price,
+      Price:PriceRef.current.value,
       Image:ImageRef.current.value,
       Category:CategoryRef.current.value
     };
 
     const newTask = [...product, newProduct];
-    setproduct(newTask);
+    setProduct(newTask);
     navigate('/shop');
     toast.success('Product Added Successfully');
   }

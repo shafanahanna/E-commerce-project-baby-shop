@@ -1,14 +1,9 @@
-import React, { useContext } from 'react'
-
-import { Data } from '../components/MainRouter';
-
+import React from 'react';
 import { MDBBtn, MDBCard, MDBCardBody, MDBCol, MDBContainer, MDBInput, MDBRow } from 'mdb-react-ui-kit';
-import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-hot-toast';
 
 const Payment = () => {
-  const{buy}=useContext(Data)
-  console.log(buy);
+  
  return (
 <MDBContainer
       className="py-5"

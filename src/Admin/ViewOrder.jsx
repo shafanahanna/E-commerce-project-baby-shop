@@ -23,7 +23,7 @@ const Vieworder = () => {
                    {(vieworder.length)<=0?(
                     <h1>No Order Yet....</h1>
                    ):
-                   <h1>ProductsDetails</h1>}
+                   <h1>Product Details</h1>}
                   </MDBTypography>
                   <div>
                     <p className="mb-0">
@@ -47,8 +47,8 @@ const Vieworder = () => {
                           <p>
                             {userData.map((item)=>(
                               <> 
-                              <span className="text-muted">user </span>  {item.userName} {" "}
-                            <span className="text-muted">Color: </span>Grey
+                              <span className="text-muted">user: </span>  {item.userName} 
+                        
                             </>
                             ))}
                             
@@ -61,7 +61,7 @@ const Vieworder = () => {
                           className="d-flex align-items-center justify-content-around"
                         >
                           <MDBTypography tag="h5" className="mb-0">
-                            <b>Price </b> {item.newPrice}
+                            <b>Price </b>Rs {item.Price}
                           </MDBTypography>
                         </MDBCol>
                         <MDBCol md="12" lg="6" xl="4" className="offset-lg-1">

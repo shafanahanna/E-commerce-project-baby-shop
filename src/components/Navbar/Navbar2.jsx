@@ -54,7 +54,7 @@ const Navbar2 = () => {
     
 
         
-            <Nav className="me-auto my-2 my-lg-0 fw-bold mb-8" style={{ maxHeight: '100px' }} navbarScroll variant="black">
+            <Nav className="me-auto my-2 my-lg-0 fw-bold mb-8" style={{ maxHeight: '50px' }} navbarScroll variant="black">
             
             <Nav.Link onClick={()=>navigate('/')}>HOME</Nav.Link>
              <Nav.Link onClick={()=>navigate('/shop')}>SHOP</Nav.Link>
@@ -100,7 +100,7 @@ const Navbar2 = () => {
                 </Nav.Link>
               ) : (
                 <>
-                  <Nav.Link className="text-danger">{userData.password}
+                  <Nav.Link className="text-success">{userData[0].userName}
                     <CgProfile />
                  </Nav.Link>
                    {/* <Nav.Link className="text-danger" onClick={logout}>

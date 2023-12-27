@@ -1,7 +1,10 @@
-.card:hover{
-        background-color:transparent;
+.cards:hover{
+        background-color:dimgray;
         transform: scale(1.05); 
         transition: transform 0.3s ease-in-out; 
         box-shadow: 0 4px 8px rgba(69, 176, 234, 0.1); 
       
+}
+.cards{
+        border: 2px solid black;
 }

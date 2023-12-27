@@ -41,7 +41,7 @@ const Testimonials = () => {
 
           <div className="row text-center">
             <div className="col-md-4 mb-4 mb-md-0">
-              <div className="card">
+              <div className="cards">
                 <div className="card-body py-4 mt-2">
                   <div className="d-flex justify-content-center mb-4">
                     <img
@@ -67,7 +67,7 @@ const Testimonials = () => {
               </div>
             </div>
             <div className="col-md-4 mb-4 mb-md-0">
-              <div className="card">
+              <div className="cards">
                 <div className="card-body py-4 mt-2">
                   <div className="d-flex justify-content-center mb-4">
                     <img
@@ -94,7 +94,7 @@ const Testimonials = () => {
               </div>
             </div>
             <div className="col-md-4 mb-0">
-              <div className="card">
+              <div className="cards">
                 <div className="card-body py-4 mt-2">
                   <div className="d-flex justify-content-center mb-4">
                     <img
