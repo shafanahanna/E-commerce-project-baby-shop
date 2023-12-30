@@ -1,12 +1,16 @@
 import React from 'react'
 import {  Carousel } from 'react-bootstrap'
 import Testimonials from './Testimonals'
+import Banners from './Banners'
+import Navbar2 from '../components/Navbar/Navbar2'
 
 
  
 
 function Home() {
   return (
+    <>
+    <Navbar2 />
     <div style={{border:'1px solid black'}}>
         
         <Carousel data-bs-theme='white'>
@@ -49,9 +53,11 @@ function Home() {
             </Carousel.Item> 
             
         </Carousel>
+        <Banners/>
         <Testimonials/>
         
     </div>
+    </>
   )
 }
 

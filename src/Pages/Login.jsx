@@ -5,9 +5,10 @@ import { toast } from 'react-hot-toast'
 import { Data } from '../components/MainRouter';
 import 'react-toastify/dist/ReactToastify.css';
 import './Login.css';
+import Navbar2 from "../components/Navbar/Navbar2";
 
 const Login = ()=>{
-  const {userData, setLogin,setLoginUser} = useContext(Data);
+  const {userData, setLogin,setLoginUser,loginuser} = useContext(Data);
   const navigate = useNavigate();
   const user = useRef();
   const pass = useRef();
@@ -19,21 +20,28 @@ const Login = ()=>{
     const username = user.current.value;
     const password = pass.current.value;
 
-    const users = userData.find((item)=>item.userName === username && item.password === password);
-    if(users){
+    const currenduser = userData.find((item)=>item.userName == username && item.password == password)
+    const currendpass = userData.find((item)=>item.userName == username && item.password == password);
+
+    if(currenduser && currendpass){
       setLogin(true);
       toast.success("Thank you for login");
       navigate('/');
-      setLoginUser(users);
+      setLoginUser(currenduser);
+      setLoginUser(currendpass)
     }else{
       toast.error('user not found')
     }
+    
   };
+    console.log(loginuser,'hai');
 
   return(
+    <>
+    <Navbar2/>
     <Container className="d-flex justify-content-center align-items-center login" style={{ minHeight: '100vh' }}>
       
-      <div className="shadow p-3 mb-5 bg-white rounded m-3" style={{ width: '25rem',border:'2px solid black' }}>
+      <div className="shadow p-3 mb-5 bg-white rounded m-3" style={{ width: '25rem' }}>
       <h1 style={{textAlign:'center'}}>LOGIN</h1>
         <Row className="mb-3">
           <Col>
@@ -71,6 +79,7 @@ const Login = ()=>{
       </div>
       
     </Container>
+    </>
     
     
     

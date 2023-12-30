@@ -2,12 +2,15 @@ import React, { useContext } from 'react';
 import { Data } from '../components/MainRouter';
 import { useNavigate } from 'react-router-dom';
 import { Card,Button,Row,Col} from 'react-bootstrap';
+import Navbar2 from '../components/Navbar/Navbar2';
 
 const Nutrition = () => {
     const navigate= useNavigate()
     const { product } = useContext(Data)
     const Nutri = product.filter((item)=> item.Category === 'Nutrition')
   return (
+    <>
+    <Navbar2/>
     <Row className='m-4'>
             {Nutri.map((item)=>(
                 <Col key={item.Id} xs={12} sm={6} md={4} lg={3} xl={3}  className='d-flex flex-wrap m-4'>
@@ -23,6 +26,7 @@ const Nutrition = () => {
             ))}
         
     </Row>
+    </>
   )
 }
 

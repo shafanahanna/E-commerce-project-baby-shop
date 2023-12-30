@@ -6,23 +6,24 @@ import { toast } from 'react-hot-toast';
 import { Data } from '../MainRouter';
 import { Form ,} from 'react-bootstrap';
 import './Navbar.css';
-import { RiLogoutCircleLine } from "react-icons/ri";
 import { BiSolidBabyCarriage } from "react-icons/bi";
 import { RiAdminLine } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
-import { AiOutlineLogin } from "react-icons/ai";
+
 
 
 
 
 const Navbar2 = () => {
   const navigate = useNavigate();
-  const { login, setLogin, userData,setSearch} = useContext(Data);
+  const { login, setLogin,setSearch,loginuser,setcart} = useContext(Data);
 
   const logout = () => {
+    setcart([])
     setLogin(false);
     navigate('/');
     toast.error('You have logged out');
+    console.log(loginuser);
   };
 
   const carticon = () => {
@@ -33,8 +34,7 @@ const Navbar2 = () => {
     }
   };
 
-  
- 
+   
 
   return (
     <div>
@@ -96,27 +96,27 @@ const Navbar2 = () => {
             <Nav className="d-flex my-3 nav-left  fw-bold" navbarScroll>
               {login === false ? (
                 <Nav.Link className="text-black" onClick={() => navigate('/login')}>
-                  <AiOutlineLogin />
+                  Login
                 </Nav.Link>
               ) : (
                 <>
-                  <Nav.Link className="text-success">{userData[0].userName}
+                  <Nav.Link className="text-success">{loginuser.userName}
                     <CgProfile />
                  </Nav.Link>
-                   {/* <Nav.Link className="text-danger" onClick={logout}>
-                  <RiLogoutCircleLine />
-                  </Nav.Link>  */}
+                 <Nav.Link className="text-danger" onClick={logout}>
+                  Logout
+                  </Nav.Link> 
                   
                   </>
                   
               )}
-              <Nav.Link className="text-danger" onClick={logout}>
-                  <RiLogoutCircleLine />
-                  </Nav.Link> 
+              
             
             <BiSolidBabyCarriage style={{ width: '2rem', height: '2rem', marginLeft: '1rem', cursor: 'pointer' }} onClick={carticon}/>
             
-             <RiAdminLine style={{ width: '2rem', height: '2rem', marginLeft: '1rem', cursor: 'pointer' }} onClick={() => navigate('/adminlogin')}  />
+
+            
+            <RiAdminLine style={{ width: '2rem', height: '2rem', marginLeft: '1rem', cursor: 'pointer' }} onClick={() => navigate('/adminlogin')}  />
 
              </Nav>
           </Navbar.Collapse>

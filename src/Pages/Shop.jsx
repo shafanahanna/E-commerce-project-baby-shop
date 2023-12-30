@@ -2,12 +2,14 @@ import React, { useContext} from 'react'
 import { Button, Card, CardGroup } from 'react-bootstrap'
 import { Data } from '../components/MainRouter'
 import { useNavigate } from 'react-router-dom';
+import Navbar2 from '../components/Navbar/Navbar2';
 
 const Shop = () => {
     const {product} =useContext(Data);
     const navigate=useNavigate()
   return (
     <div>
+        <Navbar2/>
         <h3 style={{color:'deeppink',textAlign:'center',fontWeight:'1000px'}}>Baby Shop</h3>
          <div className='container'>
             <div className='row'>

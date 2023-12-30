@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { Data } from '../components/MainRouter';
 import { toast } from 'react-hot-toast';
 import { Card,Button } from 'react-bootstrap';
+import Navbar2 from '../components/Navbar/Navbar2';
 
 const Viewproduct = () => {
     const navigate=useNavigate();
@@ -29,8 +30,11 @@ const Viewproduct = () => {
             navigate('/login');
             toast.error("Please login first")
         }
+        console.log(loginuser.cart);
     };
    return (
+    <>
+    <Navbar2/>
     <div className='container mt-4 m-4 '>
       <div className='row justify-content-center align-items-center' >
         <div className='col-md-5'>
@@ -63,6 +67,7 @@ const Viewproduct = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

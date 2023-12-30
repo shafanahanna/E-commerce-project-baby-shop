@@ -19,7 +19,7 @@ const navigate=useNavigate();
 <div  >
         <Card 
           style={{ width: '18rem' }}
-          className="mb-2 m-2 bg-success" 
+          className="mb-2 m-2 bg-success " 
           onClick={()=>navigate("/users")} 
         >
           <Card.Header>USERS</Card.Header>

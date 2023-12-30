@@ -2,12 +2,15 @@ import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Data } from '../components/MainRouter';
 import { Card,Button,Row,Col } from 'react-bootstrap';
+import Navbar2 from '../components/Navbar/Navbar2';
 
 const Toys = () => {
     const navigate = useNavigate()
     const { product } =useContext(Data)
     const Toy = product.filter((item)=> item.Category === 'Toy')
   return ( 
+    <>
+    <Navbar2/>
     <Row className='m-4'>
             {Toy.map((item)=>(
                 <Col key={item.Id}  xs={12} sm={6} md={4} lg={3} xl={3} className='d-flex flex-wrap mb-4'>
@@ -23,6 +26,7 @@ const Toys = () => {
             ))}
         
     </Row>
+    </>
   )
 }
 

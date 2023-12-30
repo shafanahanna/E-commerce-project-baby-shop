@@ -2,6 +2,7 @@ import { useContext,useRef,useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import { Data } from "../components/MainRouter";
 import './Registration.css'
+import Navbar2 from "../components/Navbar/Navbar2";
 
 
 
@@ -54,8 +55,9 @@ navigate('/login');
 };
 return(
   <>
+  <Navbar2/>
    <div className="container d-flex justify-content-center align-items-center register " style={{ minHeight: '100vh'}}>
-      <div className='rounded shadow p-3 mb-5 bg-white register1 ' style={{ width: '25rem',border:'2px solid black' }}>
+      <div className='rounded shadow p-3 mb-5 bg-white register1 ' style={{ width: '25rem' }}>
         <form >
           <h1 className='mt-3' style={{ fontFamily: 'inherit',color:'black' }}>
             Registration Form

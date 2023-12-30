@@ -1,16 +1,19 @@
 import React from 'react';
 import { MDBBtn, MDBCard, MDBCardBody, MDBCol, MDBContainer, MDBInput, MDBRow } from 'mdb-react-ui-kit';
 import { toast } from 'react-hot-toast';
+import Navbar2 from '../components/Navbar/Navbar2';
 
 const Payment = () => {
   
  return (
+  <>
+  <Navbar2/>
 <MDBContainer
       className="py-5"
       fluid
       style={{
-        backgroundImage:
-          "url(https://mdbcdn.b-cdn.net/img/Photos/Others/background3.webp)",
+        backgroundColor:'lightskyblue'
+          
       }}
     >
       <MDBRow className=" d-flex justify-content-center">
@@ -53,7 +56,7 @@ const Payment = () => {
                       id="form2"
                       type="text"
                       size="lg"
-                      value="** ** ** 4296"
+                      value="** ** ** 4587"
                     />
                   </div>
                 </div>
@@ -74,7 +77,7 @@ const Payment = () => {
                     id="form4"
                     type="text"
                     size="lg"
-                    value="1234 5678 1234 5678"
+                    value="1254 7895 4569"
                   />
                 </MDBCol>
                 <MDBCol size="3">
@@ -104,6 +107,7 @@ const Payment = () => {
         </MDBCol>
       </MDBRow>
     </MDBContainer>
+    </>
   );
 
 

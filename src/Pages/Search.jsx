@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Data } from '../components/MainRouter'
 import { useNavigate } from 'react-router-dom';
 import { Button, Card } from 'react-bootstrap';
+import Navbar2 from '../components/Navbar/Navbar2';
 
 const Search = () => {
     const {product,search} = useContext(Data);
@@ -9,14 +10,16 @@ const Search = () => {
     const Search = product.filter((item)=>{
         if(search === ""){
             return item;
-        } else if(item.ProductName.toLowerCase().includes(search.toLowerCase())){
+        } else if(item.Category.toLowerCase().includes(search.toLowerCase())){
             return item;
-        }else{
+        }
+        else{
             return "";
         }
     });
   return (
     <div>
+        <Navbar2/>
       <div>
         <hr />
         

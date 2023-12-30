@@ -16,9 +16,8 @@ const AddProdct = () => {
   const ImageRef = useRef(null)
   const CategoryRef = useRef(null)
 
+  // form submitt
   const handleSubmit = () =>{
-      
-
     const Price = parseInt(PriceRef.current.value);
     const qty = parseInt(qtyRef.current.value);
     
@@ -77,6 +76,7 @@ const AddProdct = () => {
             </div>
 
             <div className="mb-3">
+              
               <label htmlFor="category" className="form-label">
                 Category:
               </label>

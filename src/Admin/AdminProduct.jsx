@@ -10,6 +10,8 @@ import SideBar from '../components/Sidebar';
 const AdminProduct = () => {
   const navigate=useNavigate();
   const {product,setProduct}=useContext(Data);
+
+  // remove product
   const removeTask=(index)=>{
     const newTask=[...product]
      newTask.splice(index,1)
@@ -55,7 +57,7 @@ const AdminProduct = () => {
                       </MDBCol>
                       <MDBCol md="3" lg="3" xl="3">
                         <p className="lead fw-normal mb-2">{item.ProductName}</p>
-                        
+                        <b>RS:{item.Price}</b>
                       </MDBCol>
                       
                      

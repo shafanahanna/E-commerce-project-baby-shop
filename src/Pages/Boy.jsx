@@ -2,12 +2,15 @@ import React, { useContext } from 'react';
 import { Data } from '../components/MainRouter';
 import { useNavigate } from 'react-router-dom';
 import { Card,Button,Row,Col} from 'react-bootstrap';
+import Navbar2 from '../components/Navbar/Navbar2';
 
 const Boy = () => {
     const navigate= useNavigate()
     const { product } = useContext(Data)
     const boy = product.filter((item)=> item.Gender === 'Boy')
   return (
+    <>
+    <Navbar2/>
     <Row className='m-4'>
        <h1 style={{color:'deepskyblue' , textAlign:'center'}}>Boys</h1>
             {boy.map((item)=>(
@@ -24,6 +27,7 @@ const Boy = () => {
             ))}
         
     </Row>
+    </>
   )
 }
 

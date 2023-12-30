@@ -2,12 +2,15 @@ import React, { useContext } from "react";
 import { Data } from "../components/MainRouter";
 import { useNavigate } from "react-router-dom";
 import { Card, Button, Row, Col } from "react-bootstrap";
+import Navbar2 from "../components/Navbar/Navbar2";
 
 const Clothes = () => {
   const navigate = useNavigate();
   const { product } = useContext(Data);
   const Clothes = product.filter((item) => item.Category === "Clothes");
   return (
+    <>
+    <Navbar2/>
     <Row className="m-4">
       {Clothes.map((item) => (
         <Col
@@ -44,6 +47,7 @@ const Clothes = () => {
         </Col>
       ))}
     </Row>
+    </>
   );
 };
 

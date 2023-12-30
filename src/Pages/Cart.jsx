@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { MDBCardBody, MDBCardImage, MDBCol, MDBContainer, MDBIcon, MDBRow, MDBTypography } from 'mdb-react-ui-kit';
 import { Button } from 'react-bootstrap';
+import Navbar2 from '../components/Navbar/Navbar2';
 
 const Cart = () => {
     const {setcart,product,setvieworder,loginuser} = useContext(Data);
@@ -12,7 +13,7 @@ const Cart = () => {
     useEffect(()=>{
         setcartuser(loginuser.cart)
     },[loginuser.cart]);
-
+   
     const removeTask=(x)=>{
         const newTask = cartuser.filter((item)=> item.Id !== x);
         setcartuser(newTask);
@@ -58,10 +59,15 @@ const Cart = () => {
     const order =()=>{
         navigate('/payment');
         setvieworder(cartuser)
+        if(loginuser){
+            loginuser.cart = [];
+            setcartuser([]);
+        }
     }
     
   return (
     <div>
+        <Navbar2/>
      <section className='navu h-100 w-50' style={{backgroundColor:'#eee'}}>
         <MDBContainer className='py-5 h-100 justify-content-center align-items-center '>
             <MDBRow className='justify-content-center align-items-center h-100'>

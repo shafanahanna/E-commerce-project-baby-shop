@@ -1,7 +1,6 @@
 import React from 'react'
 import { createContext, useState } from 'react';
 import {Route,Routes} from 'react-router-dom';
-import Navbar2 from './Navbar/Navbar2';
 import Home from '../Pages/Home';
 import Login from '../Pages/Login';
 import Registration from '../Pages/Registration';
@@ -36,6 +35,7 @@ import EditProdct from '../Admin/EditProdct';
 
 export const Data=createContext();
 
+// state declare in parent component
 const MainRouter = () => {
 
   const [userData, setUserData ]=useState([]);
@@ -45,16 +45,17 @@ const MainRouter = () => {
   const [cart,setcart]  = useState([]);
   const [vieworder,setvieworder] =useState([]);
   const [search,setSearch] = useState("")
-
+  // const [isAdmin,setisAdmin]=useState(false)
 
 
   return (
     <div>
-      
+      {/* // context passing */}
          <Data.Provider value={{product,setProduct,userData, setUserData,login,setLogin,loginuser,setLoginUser,cart,setcart,vieworder,setvieworder,search,setSearch}}> 
 
          <Toaster position='top-center'/> 
-         <Navbar2/>
+        
+         
        <Routes>
         
         <Route path='/'  element= {<Home />} /> 
@@ -71,6 +72,7 @@ const MainRouter = () => {
         <Route path='/viewproduct/:Id' element={<Viewproduct/>} />
         <Route path='/cart' element={<Cart/>} />
         <Route path='/payment' element={<Payment/>} />
+        
         <Route path='/adminlogin' element={<AdminLogin/>}/>
         <Route path='/adminhome' element={<AdminHome/>}/>
         <Route path='/users' element={<Users/>}/>
