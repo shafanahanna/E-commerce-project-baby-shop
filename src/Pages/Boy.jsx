@@ -11,6 +11,7 @@ const Boy = () => {
   return (
     <>
     <Navbar2/>
+    <hr/>
     <Row className='m-4'>
        <h1 style={{color:'deepskyblue' , textAlign:'center'}}>Boys</h1>
             {boy.map((item)=>(

@@ -61,7 +61,7 @@ const Cart = () => {
         setvieworder(cartuser)
         if(loginuser){
             loginuser.cart = [];
-            setcartuser([]);
+        
         }
     }
     

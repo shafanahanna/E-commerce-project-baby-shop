@@ -10,6 +10,7 @@ const Viewproduct = () => {
     const navigate=useNavigate();
     const { product,login,loginuser } = useContext(Data)
     const { Id } = useParams();
+
     const findviewproduct = product.filter((item)=> item.Id === parseInt(Id));
     const [btn,setbtn] = useState(true);
 
@@ -17,10 +18,11 @@ const Viewproduct = () => {
         if(login){
             const [productget] = findviewproduct;
 
-            const isProductInCart = loginuser.cart.some((item)=>item.Id === productget.Id);
+            const isProductInCart = loginuser.cart.find((item)=>item.Id === productget.Id);
             if(!isProductInCart){
+              
                 loginuser.cart.push({...productget,qty:1});
-                console.log(loginuser,"viewprdct");
+  
                 toast.success("Your product is added to cart")
             }else{
                 toast.error("This product is already in your cart");
@@ -30,7 +32,7 @@ const Viewproduct = () => {
             navigate('/login');
             toast.error("Please login first")
         }
-        console.log(loginuser.cart);
+        console.log(loginuser?.cart);
     };
    return (
     <>

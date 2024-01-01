@@ -10,6 +10,7 @@ const AddProdct = () => {
   let Id= 40;
   const navigate=useNavigate();
   const {product,setProduct} =useContext(Data)
+  
   const qtyRef =useRef(null)
   const ProductNameRef = useRef(null)
   const PriceRef =useRef(null)

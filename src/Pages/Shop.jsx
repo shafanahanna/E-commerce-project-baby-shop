@@ -10,6 +10,7 @@ const Shop = () => {
   return (
     <div>
         <Navbar2/>
+        <hr/>
         <h3 style={{color:'deeppink',textAlign:'center',fontWeight:'1000px'}}>Baby Shop</h3>
          <div className='container'>
             <div className='row'>

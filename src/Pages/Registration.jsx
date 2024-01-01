@@ -8,12 +8,15 @@ import Navbar2 from "../components/Navbar/Navbar2";
 
 const Registration = ()=>{
   const navigate = useNavigate();
+  
   const {userData,setUserData} = useContext(Data);
+
   const userNameRef = useRef(null);
   const emailIdRef = useRef(null);
   const phoneNumberRef = useRef(null);
   const passwordRef = useRef(null);
   const confirmpasswordRef = useRef(null);
+
   const [errorMessage ,setErrorMessage] = useState('');
 
   const submit = (e)=>{

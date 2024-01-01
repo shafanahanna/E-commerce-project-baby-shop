@@ -11,8 +11,9 @@ const Girl = () => {
   return (
      <>
      <Navbar2/>
+     <hr/>
     <Row className='m-4'>
-      <h1 style={{color:'deeppink',textAlign:'center'}}>Girls</h1>
+      <h1 style={{color:'deeppink',textAlign:'center'}}>Girl</h1>
             {girl.map((item)=>(
                 <Col key={item.Id} xs={12} sm={6} md={4} lg={3} xl={3}  className='d-flex flex-wrap m-4'>
                   <Card className='m-2 p-5' style={{width:'17rem',border:'solid black 2px'}}>

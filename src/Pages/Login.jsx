@@ -3,9 +3,7 @@ import { Button,Container,Row,Col } from "react-bootstrap";
 import { Link,useNavigate } from "react-router-dom";
 import { toast } from 'react-hot-toast'
 import { Data } from '../components/MainRouter';
-import 'react-toastify/dist/ReactToastify.css';
 import './Login.css';
-import Navbar2 from "../components/Navbar/Navbar2";
 
 const Login = ()=>{
   const {userData, setLogin,setLoginUser,loginuser} = useContext(Data);
@@ -20,12 +18,12 @@ const Login = ()=>{
     const username = user.current.value;
     const password = pass.current.value;
 
-    const currenduser = userData.find((item)=>item.userName == username && item.password == password)
-    const currendpass = userData.find((item)=>item.userName == username && item.password == password);
+    const currenduser = userData.find((item)=>item.userName == username )
+    const currendpass = userData.find((item)=>item.password == password);
 
     if(currenduser && currendpass){
       setLogin(true);
-      toast.success("Thank you for login");
+      toast.success("Login successfully");
       navigate('/');
       setLoginUser(currenduser);
       setLoginUser(currendpass)
@@ -38,7 +36,7 @@ const Login = ()=>{
 
   return(
     <>
-    <Navbar2/>
+  
     <Container className="d-flex justify-content-center align-items-center login" style={{ minHeight: '100vh' }}>
       
       <div className="shadow p-3 mb-5 bg-white rounded m-3" style={{ width: '25rem' }}>

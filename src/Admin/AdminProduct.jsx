@@ -60,8 +60,7 @@ const AdminProduct = () => {
                         <b>RS:{item.Price}</b>
                       </MDBCol>
                       
-                     
-
+                    
                       <MDBCol md="1" lg="1" xl="1" className="text-end">
                      <FaEdit   
                      onClick={()=>navigate(`/edit/${item.Id}`)} />  

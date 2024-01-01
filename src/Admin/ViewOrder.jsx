@@ -5,7 +5,7 @@ import { MDBCard, MDBCardBody, MDBCardImage, MDBCol, MDBContainer,  MDBRow, MDBT
 import SideBar from '../components/Sidebar';
 
 const Vieworder = () => {
-  const { vieworder,userData } = useContext(Data);
+  const { vieworder,userData,loginuser } = useContext(Data);
 
   return (
     <div className='d-flex'>
@@ -44,15 +44,15 @@ const Vieworder = () => {
                         </MDBCol>
                         <MDBCol md="12" lg="6" xl="8">
                           <p className="lead fw-normal mb-2">{item.ProductName}</p>
-                          <p>
-                            {userData.map((item)=>(
+                          {/* <p>
+                            {loginuser.map((item)=>(
                               <> 
                               <span className="text-muted">user: </span>  {item.userName} 
                         
                             </>
                             ))}
                             
-                          </p>
+                          </p> */}
                         </MDBCol>
                         <MDBCol
                           md="12"

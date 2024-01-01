@@ -38,14 +38,19 @@ export const Data=createContext();
 // state declare in parent component
 const MainRouter = () => {
 
-  const [userData, setUserData ]=useState([]);
+  const [userData, setUserData ]=useState([
+    {userName:'shafana',emailId:'shafana@gmail.com',phoneNumber:9875423641,password:123456,confirmpassword:123456,cart:[]},
+    {userName:'gopika',emailId:'gopika@gmail.com',phoneNumber:9654785412,password:987654,confirmpassword:987654,cart:[]}
+
+    
+  ]);
   const [login, setLogin ]=useState(false);
   const [product,setProduct]=useState(Product)
   const [loginuser,setLoginUser]=useState(null);
   const [cart,setcart]  = useState([]);
   const [vieworder,setvieworder] =useState([]);
   const [search,setSearch] = useState("")
-  // const [isAdmin,setisAdmin]=useState(false)
+  
 
 
   return (
@@ -72,7 +77,6 @@ const MainRouter = () => {
         <Route path='/viewproduct/:Id' element={<Viewproduct/>} />
         <Route path='/cart' element={<Cart/>} />
         <Route path='/payment' element={<Payment/>} />
-        
         <Route path='/adminlogin' element={<AdminLogin/>}/>
         <Route path='/adminhome' element={<AdminHome/>}/>
         <Route path='/users' element={<Users/>}/>

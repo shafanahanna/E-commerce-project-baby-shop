@@ -11,7 +11,7 @@ const AdminLogin = () => {
   const user=useRef();
   const pass=useRef();
 
- const sub=()=>{
+ const save=()=>{
  const username=user.current.value;
  const password=pass.current.value;
  if(username ==="hanna" && password  === "12345"){
@@ -36,12 +36,8 @@ toast.success('login sucessfully')
  <input  type='password'   style={{height:"3rem",width:"20rem"}}  placeholder='password' ref={pass}  />
  <br/>
  <h6  className='mt-3 text-primary'>forget password</h6>
- 
- 
- 
- 
 
- <Button  className='mt-3'  variant="success"  onClick={sub} > Login </Button>
+ <Button  className='mt-3'  variant="success"  onClick={save} > Login </Button>
  
  </div>
  

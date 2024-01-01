@@ -11,7 +11,9 @@ const Clothes = () => {
   return (
     <>
     <Navbar2/>
+    <hr/>
     <Row className="m-4">
+      <h1 style={{textAlign:'center',color:'GrayText'}}>Clothes</h1>
       {Clothes.map((item) => (
         <Col
           key={item.Id}
