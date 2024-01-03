@@ -32,7 +32,7 @@ const Viewproduct = () => {
             navigate('/login');
             toast.error("Please login first")
         }
-        console.log(loginuser?.cart);
+        // console.log(loginuser?.cart);
     };
    return (
     <>

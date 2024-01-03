@@ -1,5 +1,5 @@
 import React, { useContext} from 'react'
-import { Button, Card, CardGroup } from 'react-bootstrap'
+import { Button, Card, CardGroup,Row } from 'react-bootstrap'
 import { Data } from '../components/MainRouter'
 import { useNavigate } from 'react-router-dom';
 import Navbar2 from '../components/Navbar/Navbar2';
@@ -13,7 +13,7 @@ const Shop = () => {
         <hr/>
         <h3 style={{color:'deeppink',textAlign:'center',fontWeight:'1000px'}}>Baby Shop</h3>
          <div className='container'>
-            <div className='row'>
+           <Row className='m-4'>
                 {product.map((item)=>(
                     <CardGroup className='col-6 col-md-3' key={item.Id}>
                         <Card className='m-2  p-4' style={{ border:'solid black 2px'}}>
@@ -26,7 +26,8 @@ const Shop = () => {
                         </Card>
                     </CardGroup>
                 ))}
-            </div>
+            </Row>
+    
 
          </div>
    </div>
