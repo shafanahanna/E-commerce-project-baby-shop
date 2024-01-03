@@ -14,11 +14,11 @@ const navigate=useNavigate();
   <div>
   <SideBar/>
   </div>
-<div className='d-flex mt-5 '>
+<div className=' col-3 d-flex  mt-5  '>
 
-<div  >
+<div >
         <Card 
-          style={{ width: '18rem' }}
+          style={{ width: '15rem' }}
           className="mb-2 m-2 bg-success " 
           onClick={()=>navigate("/users")} 
         >
@@ -34,7 +34,7 @@ const navigate=useNavigate();
 
         <div >
         <Card 
-          style={{ width: '18rem' }}
+          style={{ width: '15rem' }}
           className="mb-2  m-2 bg-warning" 
           onClick={()=>navigate("/vieworder")}
         >
@@ -50,7 +50,7 @@ const navigate=useNavigate();
         
         <div >
         <Card 
-          style={{ width: '18rem' }}
+          style={{ width: '15rem' }}
           className="mb-2  m-2  bg-primary"
         >
           <Card.Header> Delivered</Card.Header>

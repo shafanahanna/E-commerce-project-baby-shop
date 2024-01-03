@@ -39,8 +39,8 @@ export const Data=createContext();
 const MainRouter = () => {
 
   const [userData, setUserData ]=useState([
-    {userName:'shafana',emailId:'shafana@gmail.com',phoneNumber:9875423641,password:123456,confirmpassword:123456,cart:[]},
-    {userName:'gopika',emailId:'gopika@gmail.com',phoneNumber:9654785412,password:987654,confirmpassword:987654,cart:[]}
+    // {userName:'shafana',emailId:'shafana@gmail.com',phoneNumber:9875423641,password:123456,confirmpassword:123456,cart:[]},
+    // {userName:'gopika',emailId:'gopika@gmail.com',phoneNumber:9654785412,password:987654,confirmpassword:987654,cart:[]}
 
     
   ]);
